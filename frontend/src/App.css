@@ -1,0 +1,193 @@
+/* General App Container Styling */
+.App {
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    border-radius: 12px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Header Styling */
+.Dms {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dms-login {
+    text-align: center;
+    font-weight: 700;
+    margin: 100px auto;
+    background: linear-gradient(90deg, rgba(9, 0, 36, 0.27) 0%, rgba(9, 9, 121, 0.18) 18%, rgba(0, 212, 225, 0.14) 100%);
+    padding-left: 5px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.dms-dms {
+    position: relative;
+    border: 0.1px solid;
+    border-radius: 50px;
+    width: 500px;
+    margin-right: 1px;
+    background: url('./assets/milk1.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgb(1, 1, 1);
+}
+
+.dms-dms::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.dms-dms * {
+    position: relative;
+    z-index: 2;
+}
+
+.dms {
+    font-size: 12vw;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 220px;
+    color: #F7CA05;
+    text-shadow: 0 10px 7px rgba(0, 0, 0, 0.4), 0 -10px 1px #fff;
+    letter-spacing: -3px;
+}
+
+h2:hover {
+    animation: glitch 0.3s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Settings Section Styling */
+#set {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #0000ffdf;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-btn {
+    margin-left: 150px;
+}
+
+/* Responsive Design */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .App {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .Dms {
+        font-size: 2.5rem;
+    }
+
+    .dms-dms {
+        width: 90%;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .btn-btn {
+        margin-left: 50px;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .App {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .Dms {
+        font-size: 2rem;
+    }
+
+    .dms-dms {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-btn {
+        margin-left: 20px;
+    }
+
+    .dms {
+        font-size: 10vw;
+        line-height: 150px;
+    }
+}
