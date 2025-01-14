@@ -8,8 +8,8 @@ require('dotenv').config({ path: './.env' });
 // Define the app and port
 const app = express();
 
-const mongoURL = process.env.MONGODB_URL_LOCAL // local db connect
-// const mongoURL = process.env.MONGODB_URL // global db connect
+// const mongoURL = process.env.MONGODB_URL_LOCAL // local db connect
+const mongoURL = process.env.MONGODB_URL // global db connect
 const PORT = process.env.PORT || 3000;
 
 
